@@ -32,35 +32,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cog-dt-pM6">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cog-dt-pM6">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="WTQ-Sy-a0c">
                                     <size key="itemSize" width="70" height="70"/>
-                                    <size key="estimatedItemSize" width="70" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NFK-C7-7PD" customClass="BubbleCollectionViewCell" customModule="Babupe">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bubbleCell" id="NFK-C7-7PD" customClass="BubbleCollectionViewCell" customModule="Babupe">
                                         <rect key="frame" x="10" y="10" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hin-2x-wcV">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDJ-qe-1j5">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble_filled" translatesAutoresizingMaskIntoConstraints="NO" id="NDJ-qe-1j5">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="width" secondItem="hin-2x-wcV" secondAttribute="width" id="J9D-TM-Cje"/>
-                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="centerY" secondItem="hin-2x-wcV" secondAttribute="centerY" id="Z0L-LI-BYN"/>
-                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="height" secondItem="hin-2x-wcV" secondAttribute="height" id="eWE-xP-UO6"/>
-                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="centerX" secondItem="hin-2x-wcV" secondAttribute="centerX" id="qox-Dv-D4m"/>
+                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="centerX" secondItem="hin-2x-wcV" secondAttribute="centerX" id="Dfa-8O-vLS"/>
+                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="width" secondItem="hin-2x-wcV" secondAttribute="width" id="M9v-Un-IUv"/>
+                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="height" secondItem="hin-2x-wcV" secondAttribute="height" id="pgF-aR-U1l"/>
+                                                <constraint firstItem="NDJ-qe-1j5" firstAttribute="centerY" secondItem="hin-2x-wcV" secondAttribute="centerY" id="td9-mH-kaM"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="70" height="70"/>
                                         <connections>
                                             <outlet property="bubbleImage" destination="NDJ-qe-1j5" id="LjH-ce-W2p"/>
                                         </connections>
@@ -68,22 +69,22 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cog-dt-pM6" secondAttribute="trailing" id="5zW-fX-801"/>
-                            <constraint firstItem="cog-dt-pM6" firstAttribute="leading" secondItem="rvp-4R-uyw" secondAttribute="leading" id="GvF-qw-pw9"/>
-                            <constraint firstAttribute="bottom" secondItem="cog-dt-pM6" secondAttribute="bottom" id="faW-bm-dWi"/>
-                            <constraint firstItem="cog-dt-pM6" firstAttribute="top" secondItem="rvp-4R-uyw" secondAttribute="top" id="lKS-R1-msx"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rvp-4R-uyw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Babupe" largeTitleDisplayMode="never" id="9Qq-ud-8Ld">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="nah-Ih-YHA"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="cog-dt-pM6" id="i6V-8y-11r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5m-hK-ok3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-462.31884057971018" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bubble_filled" width="1024" height="1024"/>
+    </resources>
 </document>
