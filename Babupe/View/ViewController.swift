@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    let hapticController = HapticController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,7 @@ extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? BubbleCollectionViewCell, !cell.bursted {
             cell.bursted = true
+            hapticController.haptic()
         }
     }
 }
