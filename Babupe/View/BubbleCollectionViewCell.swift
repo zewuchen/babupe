@@ -12,8 +12,12 @@ class BubbleCollectionViewCell: UICollectionViewCell {
 
     var bursted = false {
         didSet {
-            let number = Int.random(in: 1...3)
-            self.bubbleImage.image = UIImage(named: "bubble_empty\(number)")
+            var name = "bubble_filled"
+            if self.bursted == true {
+                let number = Int.random(in: 1...3)
+                name = "bubble_empty\(number)"
+            }
+            self.bubbleImage.image = UIImage(named: name)
         }
     }
 

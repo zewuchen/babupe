@@ -73,7 +73,11 @@
                         <viewLayoutGuide key="safeArea" id="rvp-4R-uyw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Babupe" largeTitleDisplayMode="never" id="9Qq-ud-8Ld">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="nah-Ih-YHA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="nah-Ih-YHA">
+                            <connections>
+                                <action selector="reset:" destination="aNh-Rb-UZ2" id="WEg-1e-Bwd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="cog-dt-pM6" id="i6V-8y-11r"/>

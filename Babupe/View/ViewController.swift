@@ -11,13 +11,21 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    let NUMBERCELLS = 60
     let hapticController = HapticController()
+    var cells: [BubbleCollectionViewCell] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+
+    @IBAction func reset(_ sender: Any) {
+        for cell in cells {
+            cell.bursted = false
+        }
     }
 
 }
@@ -28,12 +36,12 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 60
+        return NUMBERCELLS
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bubbleCell", for: indexPath) as! BubbleCollectionViewCell
-
+        cells.append(cell)
         return cell
     }
 
