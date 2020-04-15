@@ -9,6 +9,13 @@
 import UIKit
 
 class BubbleCollectionViewCell: UICollectionViewCell {
-    
+
+    var bursted = false {
+        didSet {
+            let number = Int.random(in: 1...3)
+            self.bubbleImage.image = UIImage(named: "bubble_empty\(number)")
+        }
+    }
+
     @IBOutlet weak var bubbleImage: UIImageView!
 }

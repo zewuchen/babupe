@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
 }
@@ -35,4 +36,12 @@ extension ViewController: UICollectionViewDataSource {
         return cell
     }
 
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? BubbleCollectionViewCell, !cell.bursted {
+            cell.bursted = true
+        }
+    }
 }
