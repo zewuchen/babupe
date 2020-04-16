@@ -82,14 +82,22 @@
                         <viewLayoutGuide key="safeArea" id="rvp-4R-uyw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Babupe" largeTitleDisplayMode="never" id="9Qq-ud-8Ld">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="nah-Ih-YHA">
-                            <connections>
-                                <action selector="reset:" destination="aNh-Rb-UZ2" id="WEg-1e-Bwd"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="gobackward" catalog="system" id="nah-Ih-YHA">
+                                <connections>
+                                    <action selector="reset:" destination="aNh-Rb-UZ2" id="WEg-1e-Bwd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="speaker.3" catalog="system" id="DI4-fW-RyO">
+                                <connections>
+                                    <action selector="sound:" destination="aNh-Rb-UZ2" id="XaY-Xq-ktB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="cog-dt-pM6" id="i6V-8y-11r"/>
+                        <outlet property="soundButton" destination="DI4-fW-RyO" id="6ZR-et-5T7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5m-hK-ok3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,6 +107,8 @@
     </scenes>
     <resources>
         <image name="bubble_filled" width="1024" height="1024"/>
+        <image name="gobackward" catalog="system" width="60" height="64"/>
+        <image name="speaker.3" catalog="system" width="64" height="44"/>
         <image name="wallpaper" width="1024" height="1024"/>
     </resources>
 </document>

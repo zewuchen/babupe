@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CB047BFF24478BBD00F3D00F /* HapticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB047BFE24478BBD00F3D00F /* HapticController.swift */; };
+		CB2A1A682448E9B600160490 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A1A672448E9B600160490 /* SoundController.swift */; };
+		CB2A1A6E2448F33E00160490 /* bolha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB2A1A6D2448F33E00160490 /* bolha.mp3 */; };
 		CB4B3E9124476F0F009F712A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4B3E9024476F0F009F712A /* AppDelegate.swift */; };
 		CB4B3E9324476F0F009F712A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4B3E9224476F0F009F712A /* SceneDelegate.swift */; };
 		CB4B3E9524476F0F009F712A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4B3E9424476F0F009F712A /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		CB047BFE24478BBD00F3D00F /* HapticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticController.swift; sourceTree = "<group>"; };
+		CB2A1A672448E9B600160490 /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
+		CB2A1A6D2448F33E00160490 /* bolha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bolha.mp3; sourceTree = "<group>"; };
 		CB4B3E8D24476F0F009F712A /* Babupe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babupe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4B3E9024476F0F009F712A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB4B3E9224476F0F009F712A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB2A1A662448E98800160490 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				CB2A1A6D2448F33E00160490 /* bolha.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		CB4B3E8424476F0F009F712A = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +72,7 @@
 		CB4B3E8F24476F0F009F712A /* Babupe */ = {
 			isa = PBXGroup;
 			children = (
+				CB2A1A662448E98800160490 /* Sound */,
 				CB4B3EA424477091009F712A /* Application */,
 				CB4B3EA5244770AD009F712A /* View */,
 				CB4B3EA6244770B8009F712A /* Controller */,
@@ -92,6 +105,7 @@
 		CB4B3EA6244770B8009F712A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CB2A1A672448E9B600160490 /* SoundController.swift */,
 				CB047BFE24478BBD00F3D00F /* HapticController.swift */,
 			);
 			path = Controller;
@@ -156,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB4B3E9D24476F13009F712A /* LaunchScreen.storyboard in Resources */,
+				CB2A1A6E2448F33E00160490 /* bolha.mp3 in Resources */,
 				CB4B3EAA24477C06009F712A /* Assets.xcassets in Resources */,
 				CB4B3E9824476F0F009F712A /* Main.storyboard in Resources */,
 			);
@@ -169,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB4B3EA8244776DF009F712A /* BubbleCollectionViewCell.swift in Sources */,
+				CB2A1A682448E9B600160490 /* SoundController.swift in Sources */,
 				CB4B3E9524476F0F009F712A /* ViewController.swift in Sources */,
 				CB4B3E9124476F0F009F712A /* AppDelegate.swift in Sources */,
 				CB4B3E9324476F0F009F712A /* SceneDelegate.swift in Sources */,

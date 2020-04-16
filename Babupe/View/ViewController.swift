@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var soundButton: UIBarButtonItem!
     let NUMBERCELLS = 50
     let hapticController = HapticController()
+    let soundController = SoundController()
     var cells: [BubbleCollectionViewCell] = []
 
     override func viewDidLoad() {
@@ -25,6 +27,16 @@ class ViewController: UIViewController {
     @IBAction func reset(_ sender: Any) {
         for cell in cells {
             cell.bursted = false
+        }
+    }
+
+    @IBAction func sound(_ sender: Any) {
+        if UserDefaults.standard.bool(forKey: "sound") {
+            UserDefaults.standard.set(false, forKey: "sound")
+            soundButton.image = UIImage(systemName: "speaker.slash")
+        } else {
+            UserDefaults.standard.set(true, forKey: "sound")
+            soundButton.image = UIImage(systemName: "speaker.3")
         }
     }
 
@@ -52,6 +64,7 @@ extension ViewController: UICollectionViewDelegate {
         if let cell = collectionView.cellForItem(at: indexPath) as? BubbleCollectionViewCell, !cell.bursted {
             cell.bursted = true
             hapticController.haptic()
+            soundController.playSound()
         }
     }
 }
