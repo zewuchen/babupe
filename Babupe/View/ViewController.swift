@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let NUMBERCELLS = 60
+    let NUMBERCELLS = 50
     let hapticController = HapticController()
     var cells: [BubbleCollectionViewCell] = []
 

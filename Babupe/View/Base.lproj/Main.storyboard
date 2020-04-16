@@ -32,10 +32,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cog-dt-pM6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="gib-Tv-aFH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="896"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cog-dt-pM6">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="WTQ-Sy-a0c">
                                     <size key="itemSize" width="70" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -70,6 +73,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gib-Tv-aFH" firstAttribute="top" secondItem="rvp-4R-uyw" secondAttribute="top" id="Wbn-br-kP6"/>
+                            <constraint firstItem="gib-Tv-aFH" firstAttribute="height" secondItem="CNU-PF-oU0" secondAttribute="height" id="acB-pi-aav"/>
+                            <constraint firstItem="rvp-4R-uyw" firstAttribute="trailing" secondItem="gib-Tv-aFH" secondAttribute="trailing" id="jXp-Rh-Cnz"/>
+                            <constraint firstItem="gib-Tv-aFH" firstAttribute="leading" secondItem="rvp-4R-uyw" secondAttribute="leading" id="w93-4s-xIV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rvp-4R-uyw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Babupe" largeTitleDisplayMode="never" id="9Qq-ud-8Ld">
@@ -90,5 +99,6 @@
     </scenes>
     <resources>
         <image name="bubble_filled" width="1024" height="1024"/>
+        <image name="wallpaper" width="1024" height="1024"/>
     </resources>
 </document>
