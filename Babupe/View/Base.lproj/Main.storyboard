@@ -97,6 +97,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="cog-dt-pM6" id="i6V-8y-11r"/>
+                        <outlet property="resetButton" destination="nah-Ih-YHA" id="nK6-fs-aFx"/>
                         <outlet property="soundButton" destination="DI4-fW-RyO" id="6ZR-et-5T7"/>
                     </connections>
                 </viewController>

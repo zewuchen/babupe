@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var resetButton: UIBarButtonItem!
     @IBOutlet weak var soundButton: UIBarButtonItem!
+
     let NUMBERCELLS = 50
     let hapticController = HapticController()
     let soundController = SoundController()
@@ -22,6 +24,9 @@ class ViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
+        self.navigationController?.navigationBar.barTintColor = .navigationBar
+        resetButton.tintColor = .navigationButtons
+        soundButton.tintColor = .navigationButtons
     }
 
     @IBAction func reset(_ sender: Any) {

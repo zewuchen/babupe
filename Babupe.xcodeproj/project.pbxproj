@@ -17,6 +17,7 @@
 		CB4B3E9D24476F13009F712A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4B3E9B24476F13009F712A /* LaunchScreen.storyboard */; };
 		CB4B3EA8244776DF009F712A /* BubbleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4B3EA7244776DF009F712A /* BubbleCollectionViewCell.swift */; };
 		CB4B3EAA24477C06009F712A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB4B3EA924477C06009F712A /* Assets.xcassets */; };
+		CBFE2BF9244A15D600CC67B1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE2BF8244A15D600CC67B1 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CB4B3E9E24476F13009F712A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB4B3EA7244776DF009F712A /* BubbleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCollectionViewCell.swift; sourceTree = "<group>"; };
 		CB4B3EA924477C06009F712A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBFE2BF8244A15D600CC67B1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		CB4B3E8F24476F0F009F712A /* Babupe */ = {
 			isa = PBXGroup;
 			children = (
+				CBFE2BF6244A15A900CC67B1 /* Helpers */,
 				CB2A1A662448E98800160490 /* Sound */,
 				CB4B3EA424477091009F712A /* Application */,
 				CB4B3EA5244770AD009F712A /* View */,
@@ -109,6 +112,22 @@
 				CB047BFE24478BBD00F3D00F /* HapticController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CBFE2BF6244A15A900CC67B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CBFE2BF7244A15BB00CC67B1 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CBFE2BF7244A15BB00CC67B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBFE2BF8244A15D600CC67B1 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFE2BF9244A15D600CC67B1 /* UIColor+Extension.swift in Sources */,
 				CB4B3EA8244776DF009F712A /* BubbleCollectionViewCell.swift in Sources */,
 				CB2A1A682448E9B600160490 /* SoundController.swift in Sources */,
 				CB4B3E9524476F0F009F712A /* ViewController.swift in Sources */,
